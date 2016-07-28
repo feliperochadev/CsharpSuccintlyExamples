@@ -1,5 +1,6 @@
 using System;
 using Syncfusion;
+using System.Collections.Generic;
 class Program
 {
     static void Main()
@@ -69,47 +70,86 @@ class Program
         // string helloviaStringFormat = string.Format("Hello, {0}!", name);
         // Console.WriteLine(helloviaStringFormat);
 
-        //20
-        string item = "bread";
-        decimal amount = 2.25m;
-        Console.WriteLine("{0, -10}{1:C}", item, amount);
+        // //20
+        // string item = "bread";
+        // decimal amount = 2.25m;
+        // Console.WriteLine("{0, -10}{1:C}", item, amount);
 
-        //21
-        Console.WriteLine($"{item}   {amount}");
+        // //21
+        // Console.WriteLine($"{item}   {amount}");
 
-        //22
-        Console.WriteLine($"{nameof(item)}: {item,-10} {nameof(amount)}: {amount:C}");
+        // //22
+        // Console.WriteLine($"{nameof(item)}: {item,-10} {nameof(amount)}: {amount:C}");
 
-        //23
-        string action2 = "Sell";
-        if(priceGain > 2m)
+        // //23
+        // string action2 = "Sell";
+        // if(priceGain > 2m)
+        // {
+        //     action2 = "Buy";
+        // }
+
+        // //24
+        // string action3 = "Do Nothing";
+        // if(priceGain <= 2m)
+        // {
+        //     action3 = "Sell";
+        // }
+        // else
+        // {
+        //     action3 = "Buy";
+        // }
+
+        // //25
+        // string action4 = null;
+        // if(priceGain <= 2m)
+        // {
+        //     action4 = "Sell";
+        // }else if (priceGain > 2m && priceGain <= 3m)
+        // {
+        //     action4 = "Do Nothing";
+        // }
+        // else
+        // {
+        //     action4 = "Sell";
+        // }
+
+        //26
+        string currentWeather = "rain";
+        string equipment = null;
+        switch (currentWeather)
         {
-            action2 = "Buy";
+            case "sunny":
+                equipment = "sunglasses";
+                break;
+            case "rain":
+                equipment = "umbrella";
+                break;
+            case "cold":    
+            default:
+                equipment = "jacket";
+                break;
         }
 
-        //24
-        string action3 = "Do Nothing";
-        if(priceGain <= 2m)
-        {
-            action3 = "Sell";
-        }
-        else
-        {
-            action3 = "Buy";
-        }
+        //27
+        int [] oddNumbers = {1, 3, 5};
+        int firstOdd = oddNumbers[0];
+        int lastOdd = oddNumbers[2];
 
-        //25
-        string action4 = null;
-        if(priceGain <= 2m)
+        //28
+        string [] names = new string[3];
+        names[1] = "Joe";
+
+        //29
+        List<decimal> stockPrices = new List<decimal>();
+        stockPrices.Add(56.23m);
+        stockPrices.Add(72.80m);
+        decimal secondStockPrice = stockPrices[1];
+
+        //30
+        double[] temperatures = {72.3, 73.8, 75.1, 74.9};
+        for (int i = 0; i < temperatures.Length; i++)
         {
-            action4 = "Sell";
-        }else if (priceGain > 2m && priceGain <= 3m)
-        {
-            action4 = "Do Nothing";
-        }
-        else
-        {
-            action4 = "Sell";
+            Console.WriteLine(i);
         }
 
     }
