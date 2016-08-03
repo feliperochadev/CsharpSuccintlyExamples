@@ -113,44 +113,72 @@ class Program
         //     action4 = "Sell";
         // }
 
-        //26
-        string currentWeather = "rain";
-        string equipment = null;
-        switch (currentWeather)
-        {
-            case "sunny":
-                equipment = "sunglasses";
-                break;
-            case "rain":
-                equipment = "umbrella";
-                break;
-            case "cold":    
-            default:
-                equipment = "jacket";
-                break;
-        }
+        // //26
+        // string currentWeather = "rain";
+        // string equipment = null;
+        // switch (currentWeather)
+        // {
+        //     case "sunny":
+        //         equipment = "sunglasses";
+        //         break;
+        //     case "rain":
+        //         equipment = "umbrella";
+        //         break;
+        //     case "cold":    
+        //     default:
+        //         equipment = "jacket";
+        //         break;
+        // }
 
-        //27
-        int [] oddNumbers = {1, 3, 5};
-        int firstOdd = oddNumbers[0];
-        int lastOdd = oddNumbers[2];
+        // //27
+        // int [] oddNumbers = {1, 3, 5};
+        // int firstOdd = oddNumbers[0];
+        // int lastOdd = oddNumbers[2];
 
-        //28
-        string [] names = new string[3];
-        names[1] = "Joe";
+        // //28
+        // string [] names = new string[3];
+        // names[1] = "Joe";
 
-        //29
-        List<decimal> stockPrices = new List<decimal>();
-        stockPrices.Add(56.23m);
-        stockPrices.Add(72.80m);
-        decimal secondStockPrice = stockPrices[1];
+        // //29
+        // List<decimal> stockPrices = new List<decimal>();
+        // stockPrices.Add(56.23m);
+        // stockPrices.Add(72.80m);
+        // decimal secondStockPrice = stockPrices[1];
 
-        //30
+        // //30
         double[] temperatures = {72.3, 73.8, 75.1, 74.9};
-        for (int i = 0; i < temperatures.Length; i++)
+        // for (int i = 0; i < temperatures.Length; i++)
+        // {
+        //     Console.WriteLine(i);
+        // }
+
+        //31
+        foreach (int temperature in temperatures)
         {
-            Console.WriteLine(i);
+            Console.WriteLine(temperature);
         }
+
+        //32
+        int tempCount = 0;
+        while (tempCount < temperatures.Length)
+        {
+            Console.WriteLine(tempCount);
+            tempCount++;
+        }
+
+        //33
+        int tempCount2 = 0;
+        do
+        {
+            Console.WriteLine(tempCount2++);
+        }
+        while (tempCount2 <= temperatures.Length);
+
+
+
+
+
+
 
     }
 }
